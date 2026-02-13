@@ -33,7 +33,7 @@ export const projects = pgTable('projects', {
   genre: text('genre'),
   lyrics: text('lyrics').notNull(),
   instrumentalUrl: text('instrumental_url'),
-  aiSyncStatus: text('ai_sync_status').notNull().default(pending),
+  aiSyncStatus: text('ai_sync_status').notNull().default('pending'),
   createdAt: timestamp('created_at').notNull(),
   updatedAt: timestamp('updated_at').notNull(),
 });
