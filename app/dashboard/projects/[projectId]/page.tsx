@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface Projects/[projectId]Item {
+interface ProjectsDetailItem
   id: string;
   title?: string;
   status?: string;
@@ -10,8 +10,8 @@ interface Projects/[projectId]Item {
   [key: string]: any;
 }
 
-export default function Projects/[projectId]Page() {
-  const [items, setItems] = useState<Projects/[projectId]Item[]>([]);
+export default function ProjectsDetailPage
+  const [items, setItems] = useState<ProjectsDetailItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [newTitle, setNewTitle] = useState('');
@@ -39,7 +39,7 @@ export default function Projects/[projectId]Page() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/projects/[projectId]/${id}`, { method: 'DELETE' });
+    await fetch(`/ApiProjectsDetail/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
