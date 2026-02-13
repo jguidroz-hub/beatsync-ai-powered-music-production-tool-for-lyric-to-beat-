@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface ProjectsDetailItem
+interface ProjectsDetailItem {
   id: string;
   title?: string;
   status?: string;
@@ -10,7 +10,7 @@ interface ProjectsDetailItem
   [key: string]: any;
 }
 
-export default function ProjectsDetailPage
+export default function ProjectsDetailPage() {
   const [items, setItems] = useState<ProjectsDetailItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
